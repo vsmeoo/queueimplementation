@@ -1,15 +1,24 @@
 #include "queueinterface.h"
 #include "listqueue.h"
 #include "arrayqueue.h"
+#include "cqueue.h"
 #include <iostream>
 using namespace std;
 
 int main(){
-    queueinterface<int>* aq = new arrayqueue<int>(5);
-    aq->push(10);
-    aq->push(20);
-    aq->dequeue();
-    aq->display();
+    queueinterface<int>* cq = new cqueue<int>(5);
+    cq->push(10);
+    cq->push(20);
+    cq->dequeue();
+    cq->display();
+    cq->push(30);
+    cq->push(40);
+    cq->push(50);
+    cq->push(60);
+    cq->push(70);
+    cq->display();
+    cq->dequeue();
+    cq->display();
     return 0;
     
 }

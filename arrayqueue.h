@@ -12,7 +12,8 @@ class arrayqueue: public queueinterface<T>{
     public:
     arrayqueue(int size){
         capacity=size;
-        first=rear = -1;
+        rear = -1;
+        first = 0;
         arr = new T[capacity];
     }
 
